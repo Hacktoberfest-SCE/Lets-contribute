@@ -1,7 +1,5 @@
 #The program takes an input integer n and its task is to print an alphabet rangoli of size of n.
 def print_rangoli(size):
-    # your code goes here
-    # Alphabet Rangoli in Python - Hacker Rank Solution START
     width  = size*4-3
     string = ''
 
