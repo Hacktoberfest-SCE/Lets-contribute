@@ -1,55 +1,83 @@
 /*This is a merge sort program*/
-#include<stdio.h>
-#define max 10
+#include <stdio.h> 
+#include <stdlib.h> 
+  
+void merge(int arr[], int l, int m, int r) 
+{ 
+    int i, j, k; 
+    int n1 = m - l + 1; 
+    int n2 = r - m; 
+ 
+    int L[n1], R[n2]; 
+  
+    for (i = 0; i < n1; i++) 
+        L[i] = arr[l + i]; 
+    for (j = 0; j < n2; j++) 
+        R[j] = arr[m + 1 + j]; 
+  
+    i = 0; 
+    j = 0; 
+    k = l; 
+    while (i < n1 && j < n2) { 
+        if (L[i] <= R[j]) { 
+            arr[k] = L[i]; 
+            i++; 
+        } 
+        else { 
+            arr[k] = R[j]; 
+            j++; 
+        } 
+        k++; 
+    } 
+  
+    while (i < n1) { 
+        arr[k] = L[i]; 
+        i++; 
+        k++; 
+    } 
+  
+    
+    while (j < n2) { 
+        arr[k] = R[j]; 
+        j++; 
+        k++; 
+    } 
+} 
+  
 
-int a[11] = { 10, 14, 19, 26, 27, 31, 33, 35, 42, 44, 0 };
-int b[10];
+void mergeSort(int arr[], int l, int r) 
+{ 
+    if (l < r) { 
+       
+        int m = l + (r - l) / 2;
+        mergeSort(arr, l, m); 
+        mergeSort(arr, m + 1, r); 
+  
+        merge(arr, l, m, r); 
+    } 
+} 
+  
+void printArray(int A[], int size) 
+{ 
+    int i; 
+    for (i = 0; i < size; i++) 
+        printf("%d ", A[i]); 
+    printf("\n"); 
+} 
+  
 
-void merging(int low, int mid, int high) {
-   int l1, l2, i;
-
-   for(l1 = low, l2 = mid + 1, i = low; l1 <= mid && l2 <= high; i++) {
-      if(a[l1] <= a[l2])
-         b[i] = a[l1++];
-      else
-         b[i] = a[l2++];
-   }
+int main() 
+{ 
+    int arr[] = { 12, 11, 13, 5, 6, 7 }; 
+    int arr_size = sizeof(arr) / sizeof(arr[0]); 
+  
+    printf("Given array is \n"); 
+    printArray(arr, arr_size); 
+  
+    mergeSort(arr, 0, arr_size - 1); 
+  
+    printf("\nSorted array is \n"); 
+    printArray(arr, arr_size); 
+    return 0; 
+} 
    
-   while(l1 <= mid)    
-      b[i++] = a[l1++];
-
-   while(l2 <= high)   
-      b[i++] = a[l2++];
-
-   for(i = low; i <= high; i++)
-      a[i] = b[i];
-}
-
-void sort(int low, int high) {
-   int mid;
-   
-   if(low < high) {
-      mid = (low + high) / 2;
-      sort(low, mid);
-      sort(mid+1, high);
-      merging(low, mid, high);
-   } else { 
-      return;
-   }   
-}
-
-int main() { 
-   int i;
-
-   printf("List before sorting\n");
-   
-   for(i = 0; i <= max; i++)
-      printf("%d ", a[i]);
-
-   sort(0, max);
-
-   printf("\nList after sorting\n");
-   
-   for(i = 0; i <= max; i++)
-      printf("%d ", a[i]);
-}
