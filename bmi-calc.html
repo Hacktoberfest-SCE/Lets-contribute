@@ -1,0 +1,44 @@
+<!-- This file is for frontend of bmi calc
+--
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" name="viewport" content="width=device-width, iniitial-scale=1"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+	</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<a href="https://sourcecodester.com" class="navbar-brand">Sourcecodester</a>
+		</div>
+	</nav>
+	<div class="col-md-3"></div>
+	<div class="col-md-6 well">
+		<h3 class="text-primary">JavaScript - BMI Calculator Code</h3>
+		<hr style="border-top:1px dotted #ccc;" />
+		<form>
+			<div class="form-inline">
+				<label>Weight(kg):</label> 
+				<input type="text" class="form-control" id="weight" size="10" >
+			</div>
+			<div class="form-inline">
+				<label>Height(cm):</label> 
+				<input type="text" class="form-control" id="height" size="10">
+			</div>
+			<br />
+			<button class="btn btn-primary" type="button" onClick="calculateBmi()">Calculate</button>
+			<br /><br />
+			<div class="form-inline">
+				<label>BMI:</label> 
+				<input class="form-control" type="text" id="bmi" size="10">
+			</div>
+			<br />
+			<div class="form-inline">
+				<label>Result:</label> 
+				<input class="form-control" type="text" id="result" size="25">
+			</div>
+			<br />
+			<button class="btn btn-success" type="reset">Reset</button>
+		</form>
+	</div>
+<script src="js/script.js"></script
