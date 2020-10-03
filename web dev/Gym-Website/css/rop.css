@@ -1,0 +1,7 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background: url('image1/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
