@@ -1,0 +1,21 @@
+.wrap {
+	display: flex;
+    justify-content: center;
+}
+
+.dashboard h2 {
+	width: 100%;
+	text-align: center;
+}
+
+.panel {
+	padding: 20px;
+	width: 40%;
+}
+
+.module {
+	width: 100%;
+	display: flex;
+    justify-content: center;
+	padding: 20px;
+}

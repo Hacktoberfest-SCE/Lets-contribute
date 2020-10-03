@@ -1,0 +1,59 @@
+html, body { overfloy-x: hidden; }
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.clearfix { clear: both; }
+.hidden { display: none; }
+
+/* Parallax styles */
+.parallax-container {
+  height: 350px;
+  width: 100%;
+}
+
+/* Section styling */
+section {
+  padding: 25px 0 35px;
+	background: #ffffff;
+}
+
+#login {
+  width: 600px;
+  padding: 30px;
+  display: none;
+  background: #FFF;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-shadow: 0px 0px 4px rgba(0,0,0,0.7);
+  -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.7);
+  -moz-box-shadow: 0 0px 4px rgba(0,0,0,0.7);
+}
+#login h1 { text-align: center; }
+
+@media screen and (max-width: 450px) {
+  #login  { width: 500px; }
+}
+
+/* Footer styles */
+footer {
+  background: #000;
+  color: #ddd;
+  padding: 30px 0 30px;
+  text-align: center;
+}
+
+footer a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #eee;
+  text-decoration: underline;
+}
+
+footer img {
+	margin: 10px;
+}
