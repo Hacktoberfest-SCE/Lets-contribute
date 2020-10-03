@@ -10,12 +10,11 @@ public class Fibonacci {
         sc.close();
         System.out.println("Fibonacci Series starts");
         System.out.println(a +"\n" + b);
-        for (i = 0; i < n-2; i++){
+        for (i = 0; i < n - 2; i++) {
             c = a+b;
             System.out.println(c);
             a = b;
             b = c;
         }
-
     }
 }
