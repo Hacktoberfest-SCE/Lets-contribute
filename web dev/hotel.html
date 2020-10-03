@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- LINKING HTML TAGS with CSS file -->
+    <link rel="stylesheet" href="swiza.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- TITLE of WEBPAGE -->
+    <title>HOTEL</title>
+    <style>
+      body{
+    background: linear-gradient(to bottom, black,white);
+}
+.logo{
+
+    border-radius: 100%;
+}
+.h1{
+    color: #0059ff;
+    font-family: fantasy;
+    position: relative;
+    top: -170px;
+    left: 650px;
+}
+.h3{
+    position: relative;
+    color: #0059ff;
+    position: relative;
+    top: -200px;
+    left: 630px;
+}
+.tel{
+    position: relative;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    top: -250px;
+    left: 1250px;
+}
+.nav{
+    width: 240px;
+    height: 230px;
+    /* border: 3px black solid; */
+    border-radius: 20px;
+}
+.imgdiv{
+    /* border: 1px solid black; */
+    border-radius: 100%;
+    width: 228px;
+}
+.menu{
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 50px;
+    position: relative;
+    margin-left: 200px;
+    /* bottom: 350px; */
+}
+.bottom{
+
+    padding-top: 200px;
+    background: linear-gradient(to bottom,rgba(255, 255, 255, 0),black);
+    height: 500px;
+}
+th{
+    font-size: 50px;
+    color: white;
+    width: 500px;
+}
+td{
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.329);
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+td:hover{
+    transition: 0.3s ease-in-out;
+    color: white;
+}
+table{
+    margin-right: 50px;
+    margin-left: 50px;
+}
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="imgdiv">
+            <a href="#" title="HOTEL"><img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRCJAHS5fTeLfrro-rgFNCFB_4JrcuHP-3eyg&usqp=CAU"></a>
+        </div>
+        <h1 class="h1">HOTEL</h1>
+        <i><h3 class="h3"><q> We <strong>SOUND</strong> Good </q></h3></i>
+        <a href="tel:123456789" title="CALL US" class="tel"><mark>Ring Us</mark></a>
+    </div>
+    <hr style="background-color: #0059ff; height: 10px;border-radius: 20px;margin-top: 20px; width: 1200px;">
+    
+    
+
+    <!---- Image Mapping-->
+    <img src="menu.png" usemap="#image-map" class="menu">
+<map name="image-map">
+    <area target="_self" alt="STARTERS" title="STARTERS" href="https://www.texasroadhouse.com/menu/food/starters" coords="333,700,332,741,716,735,712,696,650,681,583,669,584,607,522,599,456,619,458,677,360,684,345,692" shape="poly">
+    <area target="" alt="MAIN COURSE" title="MAIN COURSE" href="https://www.allrecipes.com/recipes/80/main-dish/" coords="607,749,387,757,391,916,657,910,656,812,607,793,608,771" shape="poly">
+    <area target="" alt="DESSERT" title="DESSERT" href="https://www.texasroadhouse.com/menu/food/desserts" coords="468,929,577,924,581,964,578,1038,523,1052,465,1037,459,973" shape="poly">
+</map>
+
+
+
+<!----TABLE-->
+<div class="bottom">
+    <table>
+        <tr>
+            <ul>
+          <th><li>Company</li></th>
+          <th><li>Categories</li></th>
+          <th><li>Country</li></th>
+          </ul>
+        </tr>
+        <tr>
+          <td>About</td>
+          <td>Starters</td>
+          <td>Call Us</td>
+        </tr>
+        <tr>
+          <td>Terms & Conditions</td>
+          <td>Main Course</td>
+          <td>Mail Us</td>
+        </tr>
+        <tr>
+          <td>Privacy Policies</td>
+          <td>Desserts</td>
+          <td>Facebook</td>
+        </tr>
+        <tr>
+        <td>Customer Support</td>
+          <td></td>
+          <td>Instagram</td>
+        </tr>
+        <tr>
+          <td>F.A.Q</td>
+          <td></td>
+          <td>Twitter</td>
+        </tr>
+      </table>
+</div>
+</body>
+</html>
