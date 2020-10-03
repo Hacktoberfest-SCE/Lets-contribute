@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        h1 {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+            text-decoration: underline;
+            font-style: italic;
+        }
+
+        form {
+            background-color: beige;
+            border: 3px solid yellow;
+            padding: 4px 40px;
+            margin: 20px 500px;
+        }
+
+        div input {
+            padding: 5px 10px;
+            margin: 5px 5px;
+            border-radius: 10px;
+        }
+
+        .btn input {
+            border: 2px solid salmon;
+            border-radius: 10px;
+            display: block;
+            width: 33%;
+            padding: 14px 9px;
+            margin: 5px auto;
+
+        }
+    </style>
+</head>
+
+<body>
+    <form action="backend.php">
+        <h1>Contact Us</h1>
+        <div class="input">
+            Name: <input type="text">
+
+        </div>
+        <div class="input">
+            Email: <input type="text">
+
+        </div>
+        <div class="input">
+            Phone no: <input type="text">
+
+        </div>
+        <div class="input">
+            Message: <textarea name="msg" cols="30" rows="10"></textarea>
+
+        </div>
+        <div class="btn">
+            <input type="submit">
+        </div>
+    </form>
+</body>
+
+</html>
