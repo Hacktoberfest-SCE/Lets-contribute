@@ -1,3 +1,4 @@
+# Creating 2048 web game
 import numpy as np
 
 POSSIBLE_MOVES_COUNT = 4
