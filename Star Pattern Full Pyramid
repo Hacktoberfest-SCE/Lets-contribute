@@ -1,0 +1,29 @@
+#include<stdio.h>                                        //Standard input output header function
+#include<conio.h>                                        //console input and output header
+
+int main()                                               //main function begins
+{
+
+clrscr();                                                // clear screen
+int n,i,j,k;                                             //variables declaration
+
+   printf("Enter the height of the pyramid that you want");
+   scanf("%d",&n);
+
+              for(i=1;i<=n;i++)                          //loop for the number of rows starts-outer loop
+                {
+                    for(j=i;j<n;j++)                     // loop for printing space starts here
+                        {
+                            printf(" ");
+                        }
+
+                    for (k=1;k<=(2*i-1);k++)             // loop for printing * starts here
+                        {
+                            printf("*");
+                        }
+
+                    printf("\n");                      
+                }                                         //outer loop ends here
+
+  getch();                                                // get character
+}                                                         //main function ends here
