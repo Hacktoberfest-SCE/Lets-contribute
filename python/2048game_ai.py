@@ -1,3 +1,4 @@
+# Creating 2048 web game
 import numpy as np
 import matplotlib.pyplot as plt
 
