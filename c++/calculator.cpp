@@ -28,7 +28,7 @@ int main()
             break;
           
         case '%':
-            cout <<"\nResult is: "<<num1/num2;
+            cout <<"\nResult is: "<<num1%num2;
             break;
             
         default:
