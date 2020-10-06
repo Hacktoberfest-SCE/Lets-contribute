@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700');
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height:100%;
+	width: 100%;
+}
+.intro{
+	height: 100%;
+	width:100%;
+	margin:auto;
+	background: url(https://images.unsplash.com/photo-1588590560438-5e27fe3f6b71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=972&q=80) no-repeat 50% 50%;
+	background-repeat: none;
+	background-size: cover;
+	}
+.intro.inner{
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+	max-width: none;
+}
+
+.content{
+	max-width: 400px;
+	margin: left;
+	color: #fff;
+	position: absolute;
+	bottom: 180px;
+	left: 35px;
+
+}
+
+.starting{
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.starting span{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.starting span:after{
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.starting:hover span{
+  padding-right: 25px;
+}
+.starting:hover span:after {
+  opacity: 1;
+  right: 0;
+}
