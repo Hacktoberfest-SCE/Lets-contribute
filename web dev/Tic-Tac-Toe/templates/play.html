@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='tic-tac-toe.svg') }}">
+</head>
+<body>
+
+
+    <div class="container board">
+
+        <div class="jumbotron shadow-lg">
+            <h1 class="display-4 heading">Tic Tac Toe</h1>
+            <p class="lead">This is a simple Tic Tac Toe game made using Flask (python framework) as a part of my submission for the Hacktober Fest 2020.</p>
+            <hr class="my-4">
+            <!--<p>Reset the gameboard to play again.</p>
+            <a class="btn btn-primary btn-lg" href="{{ url_for('reset') }}" role="button">Reset</a>-->
+        </div>
+
+          <div class="game_board">
+            <table class="table-bordered">
+                {% for i in range(3) %}
+                <tr>
+                    {% for j in range(3) %}
+                    <td class="box">
+                        {% if board[i][j] == None %}
+                            <a href="{{ url_for('play',row=i, col=j) }}">
+                                <div class="empty"></div>
+                            </a>
+                        {% else %}
+                            {% if board[i][j] == 'X' %}
+                                <h1>
+                                    <a href="{{ url_for('play',row=i, col=j) }}">
+                                        <div style="width: 50px;">
+                                            <div class="cross"></div>
+                                        </div>
+                                    </a>
+                                </h1>
+                            {% else %}
+                                <h1>
+                                    <a href="{{ url_for('play',row=i, col=j) }}">
+                                        <div class="circle"></div>
+                                    </a>
+                                </h1>
+                            {% endif %}
+                        {% endif %}
+                    </td>
+                    {% endfor %}
+                </tr> 
+                {% endfor %}
+            </table> 
+          </div>
+
+          <br><br>
+
+        <div class="header">
+            {% if moves_left == 0 and not win %}
+                <p class="status alert alert-info shadow-lg">Game ended in a draw!</p>
+            {% elif moves_left != 0 and win %}
+                <p class="status alert alert-info shadow-lg">{{ player }} wins the game!</p>
+                <script src="https://cdn.jsdelivr.net/gh/mathusummut/confetti.js/confetti.min.js"></script><script>confetti.start()</script>
+            {% else %}
+                <p class="status alert alert-info shadow-lg">It is {{ turn }}'s turn to play</p>
+            {% endif %}
+            <div class="card shadow-lg">
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2">How to play?</h6>
+                    <p class="card-text">In an alternate manner, check out the positions (either 'O' or 'X') on the table. Whoever gets 3 symbols in a straight line or in a diagonal wins!</p>
+                </div>
+            </div>
+            <br>
+            <div class="card shadow-lg" style="width: 18rem; background-color: cornflowerblue;">
+                <div class="card-body">
+                    <p>Reset the gameboard</p>
+                    <a class="btn btn-primary btn-lg shadow-lg" href="{{ url_for('reset') }}" role="button">Reset</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>

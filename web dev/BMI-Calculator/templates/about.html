@@ -1,0 +1,26 @@
+{% extends 'skeleton.html' %}
+
+{% block pageContent %}
+
+    <style>
+        body {
+            background-color: #072540;
+            color: whitesmoke;
+            text-align: center;
+        }
+    </style>
+
+    <p>Made as a part of the HacktoberFest 2020 by <a href="https://github.com/Saumya-Bhatt">Saumya Bhatt</a></p>
+
+    <div class="conatiner" style="margin-bottom: 40px;">
+        <img src="{{ url_for('static', filename='poster.png') }}" class="poster" alt="">
+        <br>
+        <br>
+    </div>
+    <div class="container credits">
+        <p>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a></p>
+        <p>Illustrations providede by <a href="https://undraw.co/">UnDraw</a></p>
+        <p>Bootstrap model - <a href="https://www.gethalfmoon.com/">Halfmoon</a></p>
+    </div>
+
+{% endblock %}
