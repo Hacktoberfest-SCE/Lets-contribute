@@ -1,0 +1,42 @@
+{% extends 'skeleton.html' %}
+
+{% block pageContent %}
+
+<br><br>
+
+    <div class="container">
+
+        <div class="box">
+            <img src="{{ url_for('static', filename='bike.svg') }}" class="picture" alt="">
+            <div class="info">
+                <h2>What is BMI?</h2>
+                <p>Body mass index is a value derived from the mass and height of a person. The BMI is defined as the body mass divided by the square of the body height, and is universally expressed in units of kg/m², resulting from mass in kilograms and height in metres.</p>
+                <p>It essentially shows what should be the ideal ratio of your weight to height</p>
+            </div>
+        </div>
+
+        <br><br>
+
+        <div class="box">
+            <div class="info">
+                <h2>Is BMI calculated differently for male and female?</h2>
+                <p>BMI is calculated based on the weight and the height of a person. There is no such thing as a BMI calculator for females or a BMI calculator for males, but as the scientific data shows, men and women have different weight distributions. Men tend to accumulate mass at the waist, whereas women accumulate weight in the hips and buttocks.</p>
+                <p>Hence, their BMI scales are slightly different when also taing into account their overall lifestyle.</p>
+            </div>
+            <img src="{{ url_for('static', filename='train.svg') }}" class="picture" alt="">
+        </div>
+
+        <br><br>
+
+        <div class="box">
+            <img src="{{ url_for('static', filename='children.svg') }}" class="picture" alt="">
+            <div class="info">
+                <h2>Is it different for children and adults?</h2>
+                <p>The normal range of BMI is the same for all adults. With children, they grow at different rates, so it's a measure of weight for height for them, compared to other children their age.</p>
+                <p>BMI is not generally a perfect yardstick when it comes to children as they are still developing.</p>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

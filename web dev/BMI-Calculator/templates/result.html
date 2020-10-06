@@ -1,0 +1,20 @@
+{% extends 'skeleton.html' %}
+
+{% block pageContent %}
+
+    <div class="result">
+        <h1>{{ bmi }} <t style="font-size: 0.5em;">kg/m²</t></h1>
+        <p>You are considered under the category : <br><span class="span">{{ evaluation }}</span></p>
+        <br>
+        {% if bmi > 25 %}
+            <img src="{{ url_for('static', filename='work_out.svg') }}" class="picture" alt="">
+            <p>You need to work out. <a href="https://www.fitnessblender.com/">Here</a> are some resources to help you</p>
+        {% elif bmi >=18 %}
+            <img src="{{ url_for('static', filename='relax.svg') }}" class="picture" alt="">
+        {% else %}
+            <img src="{{ url_for('static', filename='work_out.svg') }}" class="picture" alt="">
+            <p>You need to work out. <a href="https://www.fitnessblender.com/">Here</a> are some resources to help you</p>
+        {% endif %}
+    </div>
+
+{% endblock %}

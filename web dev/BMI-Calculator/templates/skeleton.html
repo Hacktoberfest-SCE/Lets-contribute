@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link href="{{ url_for('static',filename='halfmoon-1.1.0/css/halfmoon-variables.min.css') }}" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Teko:wght@600&family=Anton&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='bmi.svg') }}">
+</head>
+<body>
+
+    
+    <!-- Page wrapper with .with-navbar class -->
+    <div class="page-wrapper with-navbar">
+        <!-- Navbar (immediate child of the page wrapper) -->
+        <nav class="navbar">
+            <div class="container container-fluid">
+                <a href="{{ url_for('home_page') }}" style="color: whitesmoke;" class="navbar-brand brand_name">
+                    <!--<img src="..." alt="...">-->
+                    BMI Calculator
+                </a>
+                <ul class="navbar-nav d-none d-md-flex"> <!-- d-none = display: none, d-md-flex = display: flex on medium screens and up (width > 768px) -->
+                    <li class="nav-item active">
+                        <a href="{{ url_for('resources') }}" class="nav-link">Resources</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="{{ url_for('about') }}" class="nav-link">About</a>
+                    </li>
+                </ul>
+
+                <!-- Navbar form (inline form) -->
+                <div class="custom-switch form-inline d-none d-md-flex ml-auto">
+                    <input type="checkbox" id="switch-2" value="" onclick="toggleDemo()">
+                    <label for="switch-2">Night mode</label>
+                </div>
+
+                <!-- Navbar content (with the dropdown menu) -->
+                <div class="navbar-content d-md-none ml-auto"> <!-- d-md-none = display: none on medium screens and up (width > 768px), ml-auto = margin-left: auto -->
+                    <!--<button class="btn btn-primary" type="button" onclick="toggleDemo()">Night mode</button>-->
+                    <div class="custom-switch form-inline d-md-flex ml-auto">
+                        <input type="checkbox" id="switch-2" value="" onclick="toggleDemo()">
+                        <label for="switch-2">Night mode</label>
+                    </div>            
+                </div>
+            </div>
+        </nav>
+    </div>
+      
+
+    <br><br>
+
+    <div class="container">
+
+        <div class="start_info" style="text-align:center;">
+            <h1 class="brand_name" style="font-size: 3em;">BMI Calculator</h1>
+            <p>Enter the following details below and calculate your BMI!</p>
+        </div>
+
+        {% block pageContent %}
+        {% endblock %}
+
+    </div>
+
+      
+    <!-- JavaScript -->
+    <script src="{{ url_for('static',filename='halfmoon-1.1.0/js/halfmoon.js') }}"></script>
+    <script type="text/javascript">
+    // Dark mode toggle demo
+    function toggleDemo() {
+        halfmoon.toggleDarkMode();
+    }
+    </script>
+
+    <script src="{{ url_for('static',filename='halfmoon-1.1.0/js/halfmoon.min.js') }}"></script>
+</body>
+</html>

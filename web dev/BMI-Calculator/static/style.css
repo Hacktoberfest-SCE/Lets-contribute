@@ -1,0 +1,101 @@
+
+
+.container-box {
+    display: flex;
+}
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+}
+.brand_name {
+    font-family: 'Teko', sans-serif;
+    font-size: 2em;
+}
+.start_info {
+    margin-top: 120px;
+    margin-bottom: 50px;
+}
+.calculate {
+    margin: 0;
+    position: absolute;
+    left: 45%;
+}
+.submit_btn {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5em;
+    font-weight: 500;
+    padding: 10px 20px;
+    background-color: blueviolet;
+    border-radius: 20px;
+    color: whitesmoke;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+.submit_btn:hover {
+    cursor: pointer;
+    background-color: darkslateblue;
+    transition: 0.2s;
+}
+.result {
+    text-align: center;
+}
+.result > h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 4em;
+}
+.span {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.picture {
+    width: auto;
+    height: 200px;
+}
+.navbar {
+    background-color: #242424;
+    color: whitesmoke;
+}
+.card {
+    background-color: whitesmoke;
+}
+.box {
+    display: flex;
+}
+.info {
+    margin: 0px 50px;
+}
+.poster {
+    width: 100%;
+    height: auto;
+}
+.credits {
+    display: flex;
+}
+.credits > p {
+    margin: 0px 30px 50px;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+    .container-box {
+        display: inline;
+    }
+    .start_info {
+        margin-top: 30px;
+    }
+    .box {
+        display: inline;
+    }
+    .info {
+        margin: 10px 30px;
+    }
+    .calculate {
+        margin-bottom: 40px;
+    }
+    .credits {
+        display: inline;
+    }
+}
