@@ -1,0 +1,53 @@
+using System;
+
+namespace Calculator
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter a number : ");
+            int Number1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter another number  : ");
+
+            int Number2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter a syntax : ");
+
+            String Syntax = Console.ReadLine();
+
+            if (Syntax.Equals("+"))
+            {
+
+                Console.WriteLine(Number1 + Number2);
+                Console.ReadLine();
+
+            }
+            else if (Syntax.Equals("-"))
+            {
+
+                Console.WriteLine(Number1 - Number2);
+                Console.ReadLine();
+            }
+            else if (Syntax.Equals("*") || Syntax.Equals("x"))
+            {
+
+                Console.WriteLine(Number1 * Number2);
+                Console.ReadLine();
+            }
+            else if (Syntax.Equals("/"))
+            {
+
+                Console.WriteLine(Number1 / Number2);
+                Console.ReadLine();
+            }
+            else if (Syntax.Equals("%")) {
+
+                Console.WriteLine(Number1 % Number2);
+                Console.ReadLine();
+            }
+
+        }
+    }
+}
